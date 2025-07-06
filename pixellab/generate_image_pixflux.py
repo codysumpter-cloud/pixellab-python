@@ -78,23 +78,31 @@ def generate_image_pixflux(
         "image_size": image_size,
         "negative_description": negative_description,
         "text_guidance_scale": text_guidance_scale,
-        "outline": outline,
-        "shading": shading,
-        "detail": detail,
-        "view": view,
-        "direction": direction,
         "isometric": isometric,
         "no_background": no_background,
-        "coverage_percentage": coverage_percentage,
-        "init_image": init_image.model_dump() if init_image else None,
-        "init_image_strength": init_image_strength,
-        "color_image": color_image.model_dump() if color_image else None,
         "seed": seed,
     }
+    
+    # Add optional parameters if provided
+    if outline:
+        request_data["outline"] = outline
+    if shading:
+        request_data["shading"] = shading
+    if detail:
+        request_data["detail"] = detail
+    if view:
+        request_data["view"] = view
+    if direction:
+        request_data["direction"] = direction
+    if init_image:
+        request_data["init_image"] = init_image.model_dump()
+        request_data["init_image_strength"] = init_image_strength
+    if color_image:
+        request_data["color_image"] = color_image.model_dump()
 
     try:
         response = requests.post(
-            f"{client.base_url}/generate-image-pixflux",
+            f"{client.base_url}/v2/generate-image-pixflux",
             headers=client.headers(),
             json=request_data,
         )

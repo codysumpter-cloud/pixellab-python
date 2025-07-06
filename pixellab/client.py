@@ -7,7 +7,7 @@ from .settings import settings
 
 class PixelLabClient(BaseModel):
     secret: str
-    base_url: str = "https://api.pixellab.ai/v1"
+    base_url: str = "https://api.pixellab.ai"
 
     @classmethod
     def from_env(cls) -> PixelLabClient:
@@ -30,6 +30,10 @@ class PixelLabClient(BaseModel):
     from .estimate_skeleton import estimate_skeleton
     from .generate_image_bitforge import generate_image_bitforge
     from .generate_image_pixflux import generate_image_pixflux
+    from .rotate4_with_template import rotate4_with_template
+    from .rotate8_with_template import rotate8_with_template
+    from .animate_with_template import animate_with_template
+    from .generate_tileset import generate_tileset
     from .get_balance import get_balance
     from .inpaint import inpaint
     from .rotate import rotate
