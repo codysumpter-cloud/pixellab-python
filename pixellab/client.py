@@ -37,3 +37,4 @@ class PixelLabClient(BaseModel):
     from .get_balance import get_balance
     from .inpaint import inpaint
     from .rotate import rotate
+    from .generate_isometric_tile import generate_isometric_tile
