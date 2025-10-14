@@ -38,3 +38,5 @@ class PixelLabClient(BaseModel):
     from .inpaint import inpaint
     from .rotate import rotate
     from .generate_isometric_tile import generate_isometric_tile
+    from .resize import resize
+    from .image_to_pixelart import image_to_pixelart
