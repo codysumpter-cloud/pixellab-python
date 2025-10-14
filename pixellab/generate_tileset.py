@@ -40,8 +40,8 @@ def generate_tileset(
 
     Args:
         client: The PixelLab client instance
-        inner_description: Description of the inner terrain/area
-        outer_description: Description of the outer terrain/area
+        inner_description: Description of the inner terrain/area (sent as lower_description to API)
+        outer_description: Description of the outer terrain/area (sent as upper_description to API)
         image_size: Total size of the tileset image
         tile_size: Size of individual tiles
         transition_description: Description of transition area (optional)
@@ -65,9 +65,8 @@ def generate_tileset(
         tile_size = {"width": 16, "height": 16}
 
     request_data = {
-        "inner_description": inner_description,
-        "outer_description": outer_description,
-        "image_size": image_size,
+        "lower_description": inner_description,
+        "upper_description": outer_description,
         "tile_size": tile_size,
         "transition_size": transition_size,
         "text_guidance_scale": text_guidance_scale,
@@ -87,7 +86,7 @@ def generate_tileset(
 
     try:
         response = requests.post(
-            f"{client.base_url}/v2/generate-tileset",
+            f"{client.base_url}/v2/create-tileset",
             headers=client.headers(),
             json=request_data,
         )

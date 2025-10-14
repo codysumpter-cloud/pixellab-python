@@ -99,7 +99,7 @@ def generate_isometric_tile(
 
     try:
         response = requests.post(
-            f"{client.base_url}/v2/generate-isometric-tile",
+            f"{client.base_url}/v2/create-isometric-tile",
             headers=client.headers(),
             json=request_data,
         )

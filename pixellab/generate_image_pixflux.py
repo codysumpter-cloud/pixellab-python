@@ -102,7 +102,7 @@ def generate_image_pixflux(
 
     try:
         response = requests.post(
-            f"{client.base_url}/v2/generate-image-pixflux",
+            f"{client.base_url}/v2/create-image-pixflux",
             headers=client.headers(),
             json=request_data,
         )
