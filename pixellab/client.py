@@ -29,9 +29,13 @@ class PixelLabClient(BaseModel):
     from .animate_with_text import animate_with_text
     from .animate_with_text_v2 import animate_with_text_v2
     from .edit_image import edit_image
+    from .edit_images_v2 import edit_images_v2
     from .estimate_skeleton import estimate_skeleton
     from .generate_image_bitforge import generate_image_bitforge
     from .generate_image_pixflux import generate_image_pixflux
+    from .generate_image_v2 import generate_image_v2
+    from .generate_with_style_v2 import generate_with_style_v2
+    from .generate_8_rotations_v2 import generate_8_rotations_v2
     from .rotate4_with_template import rotate4_with_template
     from .rotate8_with_template import rotate8_with_template
     from .animate_with_template import animate_with_template

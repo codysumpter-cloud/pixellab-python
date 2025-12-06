@@ -29,9 +29,9 @@ def animate_with_text_v2(
     seed: Optional[int] = None,
     no_background: Optional[bool] = True,
 ) -> AnimateWithTextV2Response:
-    """Generate pixel art animation from text description using Gemini AI.
+    """Generate pixel art animation from text description.
 
-    This endpoint uses Google's Gemini 3 Pro Image model to create smooth animations
+    This endpoint create smooth animations
     from a reference image and action description.
 
     Args:
