@@ -30,10 +30,12 @@ class PixelLabClient(BaseModel):
     from .animate_with_text_v2 import animate_with_text_v2
     from .edit_image import edit_image
     from .edit_images_v2 import edit_images_v2
+    from .edit_animation_v2 import edit_animation_v2
     from .estimate_skeleton import estimate_skeleton
     from .generate_image_bitforge import generate_image_bitforge
     from .generate_image_pixflux import generate_image_pixflux
     from .generate_image_v2 import generate_image_v2
+    from .generate_ui_v2 import generate_ui_v2
     from .generate_with_style_v2 import generate_with_style_v2
     from .generate_8_rotations_v2 import generate_8_rotations_v2
     from .rotate4_with_template import rotate4_with_template
@@ -42,6 +44,9 @@ class PixelLabClient(BaseModel):
     from .generate_tileset import generate_tileset
     from .get_balance import get_balance
     from .inpaint import inpaint
+    from .inpaint_v3 import inpaint_v3
+    from .interpolation_v2 import interpolation_v2
+    from .transfer_outfit_v2 import transfer_outfit_v2
     from .rotate import rotate
     from .generate_isometric_tile import generate_isometric_tile
     from .resize import resize
