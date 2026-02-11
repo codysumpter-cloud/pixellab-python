@@ -42,6 +42,7 @@ class PixelLabClient(BaseModel):
     from .rotate8_with_template import rotate8_with_template
     from .animate_with_template import animate_with_template
     from .generate_tileset import generate_tileset
+    from .generate_tileset_sidescroller import generate_tileset_sidescroller
     from .get_balance import get_balance
     from .inpaint import inpaint
     from .inpaint_v3 import inpaint_v3
